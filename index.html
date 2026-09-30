@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grade 10 Biology Project Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">BIOLOGY PROJECT ASSESSMENT</p>
+      <h1>Grade 10 Biology Portfolio</h1>
+      <p class="muted">A digital portfolio for 9 learners.</p>
+    </div>
+    <button id="adminBtn" class="primary">Admin Dashboard</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="homeView">
+    <div class="hero card">
+      <div>
+        <h2>Class Project</h2>
+        <p id="projectDescription">Documenting project work, evidence, progress and assessment.</p>
+      </div>
+    </div>
+    <div class="section-head">
+      <h2>Learner Portfolios</h2>
+      <span id="learnerCount" class="pill">9 learners</span>
+    </div>
+    <div id="learnerGrid" class="grid"></div>
+  </section>
+
+  <section id="portfolioView" class="hidden">
+    <button id="backBtn" class="ghost">← Back to learners</button>
+    <div id="portfolio"></div>
+  </section>
+
+  <section id="adminView" class="hidden">
+    <div class="section-head">
+      <div>
+        <button id="adminBackBtn" class="ghost">← Public portfolio</button>
+        <h2>Teacher Dashboard</h2>
+      </div>
+      <button id="signOutBtn" class="ghost">Sign out</button>
+    </div>
+    <div class="card">
+      <h3>Project settings</h3>
+      <label>Project title<input id="projectTitleInput"></label>
+      <label>Project description<textarea id="projectDescInput" rows="3"></textarea></label>
+      <button id="saveProjectBtn" class="primary">Save project details</button>
+    </div>
+    <div class="section-head"><h2>Learners</h2><button id="addLearnerBtn" class="primary">+ Add learner</button></div>
+    <div id="adminLearners" class="admin-list"></div>
+  </section>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" id="closeLogin">×</button>
+      <h2>Teacher login</h2>
+      <p class="muted">For the first version, connect this page to Supabase Auth before publishing.</p>
+      <p class="small">The dashboard interface is ready; the included README explains the free setup.</p>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap">Grade 10 Biology Project Assessment Portfolio</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
